@@ -3,7 +3,7 @@ import Fuse from 'fuse.js';
 
 export default function fuzzySearch(options) {
     const fuse = new Fuse(options, {
-        keys: ['name'],
+        keys: ['name', 'groupName', 'items.name'],
         threshold: 0.3,
     });
 

@@ -2,7 +2,7 @@ export default function groupOptions(options) {
     const nextOptions = [];
 
     options.forEach((option, i) => {
-        if ('groupId' in option) {
+        if (option.hasOwnProperty('groupId')) {
             const nextOption = { ...option };
             const groupIndex = nextOptions.findIndex((el) => 'groupId' in el && el.groupId === nextOption.groupId);
 
